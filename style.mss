@@ -38,6 +38,10 @@ Map {
     polygon-fill: transparent;
     polygon-pattern-file: url(img/wood_12.png);
     }
+  [zoom>=17] {
+    polygon-fill: transparent;
+    polygon-pattern-file: url(img/wood_18.png);
+    }
   }
   [zoom>=4] {
   [class='scrub'] { polygon-fill: lighten(@scrub,27); }
@@ -182,9 +186,13 @@ Map {
     text-size: 10;
     text-fill: darken(#D8E1EB,25);
     text-avoid-edges: true;
-    text-halo-fill: fadeout(@crop,80%);
+    text-halo-fill: lighten(#048,75);
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
+    opacity: 1;
+  }
+  [zoom>=14] {
+    opacity: .2;
   }
 }
 
