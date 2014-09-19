@@ -1,0 +1,56 @@
+- place_name: Les Praz-de-Chamonix, 74400, Haute-Savoie, France
+  zoom: 14
+  center: 
+    - 45.92470707988058
+    - 6.873664855957031
+  tags: 
+    - userbookmark
+  index: 0
+- place_name: Orsera, Switzerland
+  zoom: 14
+  center: 
+    - 46.63605981400688
+    - 8.595857620239258
+  tags: 
+    - userbookmark
+  index: 1
+- place_name: Kitzbühel, Tirol, Austria
+  zoom: 14
+  center: 
+    - 47.44550410472707
+    - 12.393264770507812
+  tags: 
+    - userbookmark
+  index: 2
+- place_name: Whistler, British Columbia, Canada
+  zoom: 14
+  center: 
+    - 50.11601018994149
+    - -122.95537948608397
+  tags: 
+    - userbookmark
+  index: 3
+- place_name: Aspen, 81611, Colorado, United States
+  zoom: 14
+  center: 
+    - 39.189291677291564
+    - -106.83989524841309
+  tags: 
+    - userbookmark
+  index: 4
+- place_name: Kingfield, 04947, Maine, United States
+  zoom: 14
+  center: 
+    - 45.04908813199671
+    - -70.31335830688477
+  tags: 
+    - userbookmark
+  index: 5
+- place_name: Breckenridge, 80424, Colorado, United States
+  zoom: 14
+  center: 
+    - 39.47767807043034
+    - -106.01471900939941
+  tags: 
+    - userbookmark
+  index: 5
