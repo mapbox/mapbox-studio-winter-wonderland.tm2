@@ -6,9 +6,7 @@
 @land: #f7f7f7;
 @water: #cdd;
 @water_dark: #185869;
-
 @green: #cdb;
-
 @crop: #eeeed4;
 @grass: #e7ebd1;
 @scrub: #A0C49F;
