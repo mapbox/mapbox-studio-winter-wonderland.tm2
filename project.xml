@@ -251,37 +251,6 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>contour-line</StyleName>  </Layer>
 
-<Style name="hillshade-3" filter-mode="first" image-filters="agg-stack-blur(16,16)" image-filters-inflate="true" comp-op="hard-light">
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'full_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffdd" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'medium_highlight')</Filter>
-    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffbb" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'medium_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.05" fill="#003366" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <Filter>([class] = 'full_shadow')</Filter>
-    <PolygonSymbolizer fill-opacity="0.05" fill="#003d5c" clip="false" />
-  </Rule>
-  <Rule>
-    <MaxScaleDenominator>5000</MaxScaleDenominator>
-    <MinScaleDenominator>1500</MinScaleDenominator>
-    <PolygonSymbolizer clip="false" />
-  </Rule>
-</Style>
 <Style name="hillshade-2" filter-mode="first" image-filters="agg-stack-blur(8,8)" image-filters-inflate="true" comp-op="hard-light">
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -310,6 +279,37 @@
   <Rule>
     <MaxScaleDenominator>25000</MaxScaleDenominator>
     <MinScaleDenominator>5000</MinScaleDenominator>
+    <PolygonSymbolizer clip="false" />
+  </Rule>
+</Style>
+<Style name="hillshade-3" filter-mode="first" image-filters="agg-stack-blur(16,16)" image-filters-inflate="true" comp-op="hard-light">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'full_highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffdd" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'medium_highlight')</Filter>
+    <PolygonSymbolizer fill-opacity="0.2" fill="#ffffbb" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'medium_shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.05" fill="#003366" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
+    <Filter>([class] = 'full_shadow')</Filter>
+    <PolygonSymbolizer fill-opacity="0.05" fill="#003d5c" clip="false" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <MinScaleDenominator>1500</MinScaleDenominator>
     <PolygonSymbolizer clip="false" />
   </Rule>
 </Style>
@@ -401,8 +401,8 @@
     <StyleName>hillshade-1</StyleName>
     <StyleName>hillshade-4</StyleName>
     <StyleName>hillshade-0</StyleName>
-    <StyleName>hillshade-2</StyleName>
-    <StyleName>hillshade-3</StyleName>  </Layer>
+    <StyleName>hillshade-3</StyleName>
+    <StyleName>hillshade-2</StyleName>  </Layer>
 
 <Style name="waterway" filter-mode="first">
   <Rule>
@@ -429,46 +429,46 @@
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="2" stroke-linecap="round" smooth="0.5" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="1.5" stroke-linecap="round" smooth="0.5" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([type] = 'river')</Filter>
+    <Filter>([type] = 'canal')</Filter>
     <LineSymbolizer stroke="#96b5ba" stroke-width="0.5" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="2" stroke-linecap="round" smooth="0.5" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>50000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="1.5" stroke-linecap="round" smooth="0.5" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MaxScaleDenominator>200000</MaxScaleDenominator>
     <MinScaleDenominator>50000</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke-width="1" stroke="#96b5ba" />
   </Rule>
   <Rule>
     <MinScaleDenominator>200000</MinScaleDenominator>
-    <Filter>([type] = 'canal')</Filter>
+    <Filter>([type] = 'river')</Filter>
     <LineSymbolizer stroke="#96b5ba" stroke-width="0.5" />
   </Rule>
 </Style>
@@ -7605,27 +7605,27 @@
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#ffffff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#ffffff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#ffffff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#ffffff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#ffffff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contour"

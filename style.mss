@@ -176,6 +176,16 @@ Map {
   }
 }
 
+#contour.line::line {
+  line-color: #048;
+  line-opacity: 0.1;
+  line-width: 1.2;
+  [index>=5] {
+    line-opacity: 0.2;
+    line-width: 1.2;
+  }
+}
+
 #contour.label::label[ele!=0] {
   [zoom<=12][index>=5],
   [zoom>=13][zoom<=15][index=10],
@@ -186,7 +196,7 @@ Map {
     text-size: 10;
     text-fill: darken(#D8E1EB,25);
     text-avoid-edges: true;
-    text-halo-fill: lighten(#048,75);
+    text-halo-fill: lighten(#d6faff,7);
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
     opacity: 1;
