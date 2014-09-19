@@ -158,5 +158,3 @@
   [zoom>=17] { text-size: 12; }
   [zoom>=18] { text-size: 14; }
 }
-
-/**/

@@ -1,9 +1,9 @@
 // Roads & Railways //
 
-@case: #fff;//#f5f7fa;
+@case: #fff;
 
-@motorway: #e8b0b0 * 0.9;//#c87f7f;
-@main: #d8b8b0;//#CF9F93;
+@motorway: #e8b0b0 * 0.9;
+@main: #d8b8b0;
 @street: #dedcda;
 
 #road,

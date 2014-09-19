@@ -35,13 +35,11 @@ Map {
 // Landcover //
 
 #landcover {
-    [class='wood'] {
-    [zoom>=4] {
-      polygon-fill: lighten(@wood,11);
-    }
-    [zoom>=8] {
-      polygon-fill: transparent;
-      polygon-pattern-file: url(img/wood_12.png);
+  [class='wood'] {
+  [zoom>=4] { polygon-fill: lighten(@wood,11); }
+  [zoom>=8] {
+    polygon-fill: transparent;
+    polygon-pattern-file: url(img/wood_12.png);
     }
   }
   [zoom>=4] {
@@ -62,9 +60,6 @@ Map {
   }
 }
 
-  
-
-
 // Landuse areas //
 
 #landuse {
@@ -73,31 +68,8 @@ Map {
   [class='crop'] { polygon-fill: @crop; }
   [class='park'] { polygon-fill: @park; }
   [class='cemetery'] { polygon-fill: @cemetery; }
-  //[class='grass'] { polygon-fill: @grass; }
   [class='industrial'] { polygon-fill: @built-up; }
-  //[class='rock'] { polygon-fill: @rock; }
-  [class='school'] { polygon-fill: mix(@land,@school,40);}//@school; }
-  //[class='scrub'] { polygon-fill: @scrub; }
-  /*[class='wood'] {
-    polygon-fill: fadeout(@wood,60);
-    polygon-pattern-file: url(img/wood_8.png);
-    [zoom>=9] {
-      polygon-pattern-file: url(img/wood_12.png);
-      polygon-fill: fadeout(@wood,70);
-    }
-    [zoom>=12] {
-      polygon-fill: fadeout(@wood,80);
-      polygon-pattern-file: url(img/wood_18.png);
-    }
-    [zoom>=14] {
-      polygon-fill: fadeout(@wood,90);
-      polygon-pattern-file: url(img/wood_24.png);
-    }
-    [zoom>=15] { polygon-fill: transparent; }
-    [zoom>=16] { polygon-pattern-file: url(img/wood_32.png); }
-    [zoom>=18] { polygon-pattern-file: url(img/wood_64.png); }
-  }
-  */
+  [class='school'] { polygon-fill: mix(@land,@school,40);}
   [type='golf_course'],[type='rough'] { polygon-fill: @land; }
   [class='pitch'][zoom>=15] {
     polygon-fill: @land;
@@ -106,7 +78,6 @@ Map {
     [zoom>=16] { line-width: 1; }
   }
   [class='sand'] {
-    //polygon-fill: @sand;
     [type='bunker'] {
       line-color: mix(@sand,@land,100);
     }
@@ -234,11 +205,9 @@ Map {
     polygon-fill: @water;
     polygon-gamma: 0.6;
     [zoom<6] { polygon-gamma: 0.4; }
-    //[area < 100000]{ //v5
       polygon-pattern-file: url(img/ice_24.png);
       [zoom>=16] { polygon-pattern-file: url(img/ice_32.png); }
       [zoom>=18] { polygon-pattern-file: url(img/ice_64.png); }
-    //}
   }
 }
 
@@ -259,7 +228,6 @@ Map {
     [zoom>=18] { line-width: 2; }
   }
 }
-
 
 // Aeroways //
 
@@ -387,5 +355,3 @@ Map {
     [zoom>=12] { line-width: 3; }
   }
 }
-
-/**/

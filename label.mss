@@ -644,5 +644,3 @@
   text-fill: @land * 0.8;
   text-size: 9;
 }
-
-/**/
