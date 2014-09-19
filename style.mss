@@ -196,7 +196,7 @@ Map {
     text-size: 10;
     text-fill: darken(#D8E1EB,25);
     text-avoid-edges: true;
-    text-halo-fill: lighten(#d6faff,7);
+    text-halo-fill: lighten(#cce,10);
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
     opacity: 1;

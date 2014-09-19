@@ -7605,27 +7605,27 @@
     <MaxScaleDenominator>100000</MaxScaleDenominator>
     <MinScaleDenominator>12500</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#f2f2fb" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#f2f2fb" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([ele] != 0) and ([index] = 10)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#f2f2fb" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MinScaleDenominator>100000</MinScaleDenominator>
     <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#f2f2fb" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
   <Rule>
     <MaxScaleDenominator>12500</MaxScaleDenominator>
     <Filter>([ele] != 0) and ([index] &gt;= 5)</Filter>
-    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#fafeff" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
+    <TextSymbolizer face-name="Open Sans Regular" placement="line" size="10" fill="#84a0c0" avoid-edges="true" halo-fill="#f2f2fb" halo-radius="2" halo-rasterizer="fast" ><![CDATA[[ele]+' m']]></TextSymbolizer>
   </Rule>
 </Style>
 <Layer name="contour"
