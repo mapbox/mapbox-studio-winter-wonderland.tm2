@@ -4,7 +4,6 @@
 // Common Colors //
 
 @land: #f7f7f7;
-
 @water: #cdd;
 @water_dark: #185869;
 
