@@ -1,0 +1,6 @@
+{
+    "name": "mapbox-studio-winter-wonderland",
+    "version": "2.0.0",
+    "description": "Winter Wonderland style for Mapbox Studio",
+    "main": "./package.json"
+}

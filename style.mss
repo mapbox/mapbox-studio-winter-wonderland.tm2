@@ -3,7 +3,7 @@
 
 // Common Colors //
 
-@land: #f7f7f7;
+@land: #fafafa;
 @water: #cdd;
 @water_dark: #185869;
 @green: #cdb;
@@ -33,7 +33,7 @@ Map {
 
 #landcover {
   [class='wood'] {
-  [zoom>=4] { polygon-fill: lighten(@wood,11); }
+  [zoom>=4] { polygon-fill: lighten(@wood,10); }
   [zoom>=8] {
     polygon-fill: transparent;
     polygon-pattern-file: url(img/wood_12.png);
@@ -44,9 +44,9 @@ Map {
     }
   }
   [zoom>=4] {
-  [class='scrub'] { polygon-fill: lighten(@scrub,27); }
-  [class='grass'] { polygon-fill: lighten(@grass,13); }
-  [class='crop'] { polygon-fill: lighten(@crop,13); }
+  [class='scrub'] { polygon-fill: lighten(@scrub,26); }
+  [class='grass'] { polygon-fill: @land; }
+  [class='crop'] { polygon-fill: @land; }
   [class='snow'] { polygon-fill: @snow; }
   // fade out stronger classes at high zooms,
   // let more detailed OSM data take over a bit:
@@ -125,31 +125,19 @@ Map {
     comp-op: hard-light;
     polygon-clip: false;
     image-filters-inflate: true;
-    [class='full_shadow'] {
-      polygon-fill: #003d5c ;
-      polygon-opacity: 0.15;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.075; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.05; }
-      [zoom>=18] { polygon-opacity: 0.025; }
+    [class='shadow'] {
+      polygon-fill: #035;
+      polygon-comp-op: multiply;
+      [zoom>=0][zoom<=4] { polygon-opacity: 0.12; }
+      [zoom>=5][zoom<=14] { polygon-opacity: 0.10; }
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.06; }
+      [zoom>=17][zoom<=18] { polygon-opacity: 0.04; }
+      [zoom>=18] { polygon-opacity: 0.02; }
     }
-    [class='medium_shadow'] {
-      polygon-fill: #036;
-      polygon-opacity: 0.15;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.075; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.05; }
-      [zoom>=18] { polygon-opacity: 0.025; }
-    }
-    [class='medium_highlight'] {
-      polygon-fill: #ffb;
-      polygon-opacity: 0.2;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
-      [zoom>=17][zoom<=18] { polygon-opacity: 0.2; }
-      [zoom>=18] { polygon-opacity: 0.1; }
-    }
-    [class='full_highlight'] {
+    [class='highlight'] {
       polygon-fill: #ffd;
-      polygon-opacity: 0.25;
-      [zoom>=15][zoom<=16] { polygon-opacity: 0.3; }
+      polygon-opacity: 0.3;
+      [zoom>=15][zoom<=16] { polygon-opacity: 0.25; }
       [zoom>=17][zoom<=18] { polygon-opacity: 0.2; }
       [zoom>=18] { polygon-opacity: 0.1; }
     }
@@ -166,7 +154,7 @@ Map {
 // unique classes and positions in the stack. This is done by
 // editing the layers list in <project.yml>.
 
-#contour.line::line {
+#contour.line::line[index!=-1] {
   line-color: #048;
   line-opacity: 0.1;
   line-width: 1.2;
@@ -176,17 +164,7 @@ Map {
   }
 }
 
-#contour.line::line {
-  line-color: #048;
-  line-opacity: 0.1;
-  line-width: 1.2;
-  [index>=5] {
-    line-opacity: 0.2;
-    line-width: 1.2;
-  }
-}
-
-#contour.label::label[ele!=0] {
+#contour.label::label {
   [zoom<=12][index>=5],
   [zoom>=13][zoom<=15][index=10],
   [zoom>=16][index>=5] {
@@ -196,13 +174,9 @@ Map {
     text-size: 10;
     text-fill: darken(#D8E1EB,25);
     text-avoid-edges: true;
-    text-halo-fill: lighten(#cce,10);
+    text-halo-fill: fadeout(@land,70%);
     text-halo-radius: 2;
     text-halo-rasterizer: fast;
-    opacity: 1;
-  }
-  [zoom>=14] {
-    opacity: .2;
   }
 }
 

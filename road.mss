@@ -185,7 +185,7 @@
         line-color: #488;
         line-dasharray: 2,1;
       }
-      [type='mtb_trail'] {
+      [type='mtb'] {
         line-color: #488;
         line-dasharray: 6,2;
       }
@@ -198,13 +198,17 @@
         line-color: #987;
         line-dasharray: 6,2;
       }
+      [type='other'] {
+        line-color: #bba;
+        line-dasharray: 2,3;
+      }
       [zoom>=15] { line-width: 1.2; }
       [zoom>=16] { line-width: 1.5; }
       [type='piste'][zoom>=15] { line-width: 1; }
       [type='piste'][zoom>=16] { line-width: 1.2; }
     }
   }
-  [type='steps'][zoom>=16] {
+  [class='path'][type='steps'][zoom>=16] {
     ::case {
       line-color: #ffd;
       line-opacity: 0.5;
